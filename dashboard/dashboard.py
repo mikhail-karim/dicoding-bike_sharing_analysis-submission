@@ -91,8 +91,10 @@ with col3:
 
 # Question 1. Total Bike Share Usage Over Time
 st.subheader('Total Bike Share Usage Over Time')
+
 fig1, ax1 = plt.subplots(figsize=(12, 6))
 ax1.plot(daily_weather_df['date'], daily_weather_df['total'], label='Total Bike Rentals', color='blue')
+
 ax1.set_xlabel('Date')
 ax1.set_ylabel('Total Rentals')
 ax1.set_title('Daily Bike Sharing')
@@ -102,8 +104,10 @@ st.pyplot(fig1)
 
 # Question 1. Average Temperature Over Time
 st.subheader('Average Temperature Over Time')
+
 fig2, ax2 = plt.subplots(figsize=(12, 6))
 ax2.plot(daily_weather_df['date'], daily_weather_df['normal_temp'], label='Average Temperature (°C)', color='orange')
+
 ax2.set_xlabel('Date')
 ax2.set_ylabel('Temperature (°C)')
 ax2.set_title('Average Daily Temperature')
@@ -113,8 +117,10 @@ st.pyplot(fig2)
 
 # Question 1. Average Humidity Over Time
 st.subheader('Average Humidity Over Time')
+
 fig3, ax3 = plt.subplots(figsize=(12, 6))
 ax3.plot(daily_weather_df['date'], daily_weather_df['normal_humidity'], label='Average Humidity (%)', color='green')
+
 ax3.set_xlabel('Date')
 ax3.set_ylabel('Humidity (%)')
 ax3.set_title('Average Daily Humidity')
@@ -128,6 +134,7 @@ st.markdown(f"""
 
 # Question 2. Bike Rentals Under Unsuitable Weather Conditions
 st.subheader('Bike Sharing Under Unsuitable Weather Conditions')
+
 fig4, ax4 = plt.subplots(figsize=(12, 6))
 sns.barplot(data=unsuitable_weather_df, x='weather_type', y='total', ax=ax4)
 
@@ -144,8 +151,10 @@ st.markdown(f"""
 
 # Question 3. Bike Sharing Usage by Day Type
 st.subheader('Bike Sharing Usage by Day Type')
+
 fig5, ax5 = plt.subplots(figsize=(6, 6))
 ax5.pie(day_type_df['total'], labels=day_type_df['day_type'], autopct='%1.1f%%', startangle=90)
+
 ax5.axis('equal')  # Equal aspect ratio ensures pie chart is circular.
 ax5.set_title('Total Bike Rentals by Day Type (Working Day vs Weekend)')
 st.pyplot(fig5)
@@ -156,11 +165,10 @@ st.markdown(f"""
 
 # Question 4. Bike Rentals by Hour of the Day
 st.subheader('Bike Rentals by Hour of the Day')
-fig6, ax6 = plt.subplots(figsize=(16, 6))
-fig7, ax7 = plt.subplots(figsize=(16, 6))
-
 
 # total rentals by hour
+fig6, ax6 = plt.subplots(figsize=(16, 6))
+
 sns.barplot(x='hour', y='total', data=hourly_rentals_df, ax=ax6, color='blue')
 ax6.set_xlabel('Hour of the Day')
 ax6.set_ylabel('Total Rentals')
@@ -169,6 +177,8 @@ ax6.set_title('Total Bike Rentals by Hour of the Day')
 st.pyplot(fig6)
 
 # average rentals by hour
+fig7, ax7 = plt.subplots(figsize=(16, 6))
+
 sns.barplot(x='hour', y='average', data=hourly_rentals_df, ax=ax7, color='orange')
 ax7.set_xlabel('Hour of the Day')
 ax7.set_ylabel('Average Rentals')
