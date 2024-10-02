@@ -54,7 +54,7 @@ main_hour_df = pd.read_csv("https://raw.githubusercontent.com/mikhail-karim/dico
 
 with st.sidebar:
     # Menambahkan logo perusahaan
-    st.image("Bicycle.png")
+    st.image("./dashboard/Bicycle.png")
     st.markdown("""
     Name: Mikhail Shams Afzal Karim\n
     Email: mikhailsakarim@gmail.com\n
