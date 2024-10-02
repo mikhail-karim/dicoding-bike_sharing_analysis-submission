@@ -29,4 +29,12 @@ cd dashboard
 streamlit run dashboard.py
 ```
 
+## Notes
+for a smooth experience using streamlit, it is recommended to change the followings in the notebook.ipynb file:
+```
+line 52: main_day_df = pd.read_csv("https://raw.githubusercontent.com/mikhail-karim/dicoding-bike_sharing_analysis-submission/refs/heads/main/dashboard/main_day.csv")
+line 53: main_hour_df = pd.read_csv("https://raw.githubusercontent.com/mikhail-karim/dicoding-bike_sharing_analysis-submission/refs/heads/main/dashboard/main_hour.csv")
+line 57:     st.image("./dashboard/Bicycle.png")
+```
+
 ## Enjoy!

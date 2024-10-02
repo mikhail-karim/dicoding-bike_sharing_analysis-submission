@@ -49,12 +49,12 @@ def shares_by_the_hours(df):
     return hourly_rentals_df
 
 # Load cleaned data
-main_day_df = pd.read_csv("https://raw.githubusercontent.com/mikhail-karim/dicoding-bike_sharing_analysis-submission/refs/heads/main/dashboard/main_day.csv")
-main_hour_df = pd.read_csv("https://raw.githubusercontent.com/mikhail-karim/dicoding-bike_sharing_analysis-submission/refs/heads/main/dashboard/main_hour.csv")
+main_day_df = pd.read_csv("main_day.csv")
+main_hour_df = pd.read_csv("main_hour.csv")
 
 with st.sidebar:
     # Menambahkan logo perusahaan
-    st.image("./dashboard/Bicycle.png")
+    st.image("Bicycle.png")
     st.markdown("""
     Name: Mikhail Shams Afzal Karim\n
     Email: mikhailsakarim@gmail.com\n
